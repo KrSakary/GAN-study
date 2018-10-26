@@ -11,7 +11,6 @@ def discriminator_fc(input, reuse=False):
         leakyrelu_1 = tf.nn.leaky_relu(fc_1)
 
         fc_2 = tf.layers.dense(leakyrelu_1, units=128)
-        #bn_2 = tf.layers.batch_normalization(fc_2, training=hparam.is_train)
         leakyrelu_2 = tf.nn.leaky_relu(fc_2)
 
         fc_3 = tf.layers.dense(leakyrelu_2, units=1)
